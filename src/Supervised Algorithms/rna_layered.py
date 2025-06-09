@@ -13,7 +13,7 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.optimizers import Adam
 
-# --- 1. Simulación de Datos (Ahora con tus entidades reales) ---
+# --- 1. Simulación de Datos  ---
 np.random.seed(42) # para reproducibilidad
 
 # 1. Entidad VEHICULO
@@ -26,12 +26,12 @@ df_vehiculo = pd.DataFrame({
     'anio_fabricacion': np.random.randint(2010, 2025, n_vehiculos),
     'marca': np.random.choice(marcas, n_vehiculos),
     'color': np.random.choice(colores, n_vehiculos),
-    'precio': np.random.randint(18000, 65000, n_vehiculos), # Increased price range
+    'precio': np.random.randint(18000, 65000, n_vehiculos), 
 })
 
 # 2. Entidad CLIENTE
 n_clientes = 2000
-localidades = [f'Loc_{i}' for i in range(1, 25)] # More localities
+localidades = [f'Loc_{i}' for i in range(1, 25)] 
 sexos = ['M', 'F', 'X']
 
 df_cliente = pd.DataFrame({
